@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" required>
+    <label for="idade">Idade:</label>
+    <input type="number" name="idade" id="idade" required>
+    <select name="cursos" id="cursos" required>
+        <option value="" disabled hidden selected>Selecione o curso</option>
+        <option value="javascript">Javascript</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+    </select>
+    <label for="notaFinal">Nota final:</label>
+    <input type="number" name="notaFinal" id="notaFinal" required>
+    <button type="button" onclick="buttonCadastrar()">Cadastrar</button>
+</form>
+<table id="alunosTable">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Curso</th>
+            <th>Nota Final</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody id="alunosTableBody">
+    </tbody>
+</table>
+<script src="index.js"></script>
+</body>
+</html>
