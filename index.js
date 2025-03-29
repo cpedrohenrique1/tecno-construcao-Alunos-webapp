@@ -1,12 +1,12 @@
 let alunos = [];
 
 function buttonCadastrar() {
-    const name = document.getElementById("nome").value;
+    const nome = document.getElementById("nome").value;
     const idade = parseInt(document.getElementById("idade").value);
     const curso = document.getElementById("cursos").value;
     const notaFinal = parseFloat(document.getElementById("notaFinal").value);
 
-    alunos.push({name, idade, curso, notaFinal});
+    alunos.push(new Aluno(nome, idade, curso, notaFinal));
     atualizarTabela();
 }
 
@@ -23,7 +23,7 @@ function atualizarTabela(){
         const celulaNotaFinal = linha.insertCell(3);
         const celulaAcao = linha.insertCell(4);
 
-        celulaNome.textContent = aluno.name;
+        celulaNome.textContent = aluno.nome;
         celulaIdade.textContent = aluno.idade;
         celulaCurso.textContent = aluno.curso;
         celulaNotaFinal.textContent = aluno.notaFinal;
@@ -38,12 +38,12 @@ function editarAluno(index) {
     if (index >= alunos.length) {
         throw "indice invalido";
     }
-    const name = document.getElementById("nome").value;
+    const nome = document.getElementById("nome").value;
     const idade = parseInt(document.getElementById("idade").value);
     const curso = document.getElementById("cursos").value;
     const notaFinal = parseFloat(document.getElementById("notaFinal").value);
 
-    alunos[index] = {name, idade, curso, notaFinal};
+    alunos[index] = new Aluno(nome, idade, curso, notaFinal);
     atualizarTabela();
 }
 
