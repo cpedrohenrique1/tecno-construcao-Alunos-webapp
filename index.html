@@ -21,6 +21,21 @@
     <input type="number" name="notaFinal" id="notaFinal" required>
     <button type="button" id="cadastrarButton">Cadastrar</button>
 </form>
+<button type="button" id="listarAlunosAprovados">Listar alunos aprovados</button>
+<button type="button" id="listarTodosAlunos">Listar todos os alunos</button>
+<button type="button" id="ordemAlfabetica">Listar os alunos em ordem alfabetica</button>
+<br>
+<h3 id="mediaNotas"></h3>
+<h3 id="mediaIdade"></h3>
+<table id="cursosTable">
+    <thead>
+    <tr>
+        <th>Curso</th>
+        <th>Quantidade de alunos</th>
+    </tr>
+    </thead>
+    <tbody id="cursosTableBody"></tbody>
+</table>
 <table id="alunosTable">
     <thead>
     <tr>
@@ -31,8 +46,7 @@
         <th>Ação</th>
     </tr>
     </thead>
-    <tbody id="alunosTableBody">
-    </tbody>
+    <tbody id="alunosTableBody"></tbody>
 </table>
 <script src="Aluno.js"></script>
 <script src="index.js"></script>
